@@ -16,7 +16,7 @@ class MainActivityRepository {
 
     companion object {
         val categoryData=MutableLiveData<CategoryListModel>()
-        fun getProfileApiCall(context: Context): MutableLiveData<CategoryListModel> {
+        fun getCategoryApiCall(context: Context): MutableLiveData<CategoryListModel> {
             val call = RetrofitHelper.getApiClient().create(ApiHolder::class.java).GetCategoryDataList()
             call.enqueue(object : Callback<CategoryListModel> {
                 override fun onResponse(

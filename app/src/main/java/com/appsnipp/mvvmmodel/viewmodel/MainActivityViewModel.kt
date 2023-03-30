@@ -12,9 +12,8 @@ class MainActivityViewModel:ViewModel() {
         var category: MutableLiveData<CategoryListModel>? = null
 
         open  fun getCategoryData(context: Context): LiveData<CategoryListModel>? {
-            category = MainActivityRepository.getProfileApiCall(context)
+            category = MainActivityRepository.getCategoryApiCall(context)
             return category
         }
-
 
 }
